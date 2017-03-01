@@ -1,0 +1,68 @@
+desktop :> mkdir DojoAssignments
+
+desktop :> cd DojoAssignments
+
+DojoAssignments :> mkdir WebFundamentals Python MEAN Ruby iOS netCore
+
+DojoAssignments :> mkdir Git HTML CSS Javascript
+
+DojoAssignments :> cd Git
+
+Git :> touch about.txt
+
+Git :> cd ..
+
+DojoAssignments :> cd HTML
+
+HTML :> touch about.txt
+
+HTML :> cd ..
+
+DojoAssignments :> cd CSS
+
+CSS :> touch about.txt
+
+CSS :> cd ..
+
+DojoAssignments :> cd Javascript
+
+Javascript :> touch about.txt
+
+Javascript :> cd ..
+
+DojoAssignments :> cd HTML
+
+HTML :> touch indentation.html
+
+HTML :> cd ..
+
+DojoAssignments :> touch assignments.txt
+
+DojoAssignments :> ls -R
+CSS             Javascript      Ruby            iOS
+Git             MEAN            WebFundamentals netCore
+HTML            Python          assignments.txt
+
+./CSS:
+about.txt
+
+./Git:
+about.txt
+
+./HTML:
+about.txt        indentation.html
+
+./Javascript:
+about.txt
+
+./MEAN:
+
+./Python:
+
+./Ruby:
+
+./WebFundamentals:
+
+./iOS:
+
+./netCore:

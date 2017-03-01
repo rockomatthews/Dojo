@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+    <title>First Form</title>
+</head>
+<body>
+    <h1>My Registration Form</h1>
+    <form>
+        <label>
+            First Name: <input type="text" name="first_name">
+        </label>
+        <br>
+        <br>
+        <label>
+            Last Name: <input type="text" name="last_name">
+        </label>
+        <br>
+        <br>
+        <label>
+            Email  <input type="text" name="email">
+        </label>
+        <br>
+        <br>
+        <label>
+            Password  <input type="password" name="password">
+        </label>
+        <br>
+        <br>
+        <label>
+            PW Confirm  <input type="password" name="pw_confirm">
+        </label>
+        <br>
+        <br>
+        <label>
+            Birthday  <input type="date" name="birthday">
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="radio" name="gender" value="male"> Male  
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female"> Female  
+        </label>
+        <label>
+            <input type="radio" name="gender" value="other"> Other  
+        </label>
+        <p>A short description about yourself:</p>
+        <label>
+            <textarea rows="10" cols="40" name="bio"></textarea>
+        </label>
+        <br>
+        <br>
+        Favorite Language  <select name="favorite_language">
+            <option value="english">English</option>
+            <option value="ruby">Ruby</option>
+            <option value="javascript">Javascript</option>
+            <option value="french">French</option>
+            <option value="python">Python</option>
+            <option value="css">CSS</option>
+        </select>
+        <br>
+        <br>
+        <input type="checkbox" name="consent" value="yes"> Check this box just to make sure we're clear that you understand that the act of visiting this site means you work for me now
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>

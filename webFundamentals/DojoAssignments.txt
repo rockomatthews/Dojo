@@ -1,0 +1,36 @@
+cd desktop
+
+cd DojoAssignments
+
+ls
+
+git init
+
+git status
+
+git add .
+
+git status
+
+git commit -m "First commit"
+
+git status
+
+git remote add origin https://github.com/rockomatthews/DojoAssignments
+
+git push origin master
+
+git status
+
+touch readme.md
+
+git status
+
+git add .
+
+git commit -m "Finish making DojoAssignments folder with a readme"
+
+git status
+
+git push origin master
+

@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            "use strict";
+            function lotto(quarters) {
+                while (quarters > 0) {
+                    var winner = Math.floor(Math.random() * 100);
+                    if (winner < 1) {
+                        return ((Math.trunc(Math.random() * 50)+50) + quarters);
+                    } else {
+                        quarters--;
+                    }      
+                } return 0;
+            }      
+        </script>
+    </head>
+</html>
+

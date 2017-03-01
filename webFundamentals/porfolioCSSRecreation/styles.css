@@ -1,0 +1,150 @@
+.container {
+    width: 970px;
+    height: auto;
+    background: linear-gradient(black, dimgray, black);
+    margin: 0 auto;
+    
+}
+
+.header {
+    width: 920px;
+    height: 64px;
+    background-color: white;
+    padding: 25px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.header h1 {
+    display: inline-block;
+    color: black;
+}
+
+.header h2 {
+    display: inline-block;
+    margin: 0 auto 0 500px;
+}
+
+.profile-photo {
+    width: 400px;
+    height: 260px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: grey;
+    margin: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.bio {
+   width: 480px;
+   height: 270px;
+   display: inline-block;
+   background: white;
+   margin: 25px 25px 25px 0;
+}
+
+.title-bar {
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(dimgray, darkslategray, dimgray);
+    display: inline-block;
+    color: #eee;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.title-text {
+    margin: 8px 0 0px 8px;
+    
+}
+
+.text-area {
+    height: 230px;
+    width: 464px;
+    padding: 0 8px 0 8px;
+    display: inline-block;
+    background: #eee;
+    color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.text-area p {
+    margin: 4px 0 0 0;
+}
+
+.feature-content {
+    height: 570px;
+    width: 287px;
+    background: white;
+    display: inline-block;
+    margin: 0 0 25px 25px;
+}
+
+
+
+.info {
+    height: 150px;
+    width: 271px;
+    margin: 0px 8px 0px 8px;
+    background: white;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.stats {
+    width: 271px;
+    height: auto;
+}
+
+.stats ul {
+    list-style-type: none;
+    margin: 10px 0 0 -30px;
+}
+
+.stats li {
+    display: inline-block; 
+}
+
+.stats img {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    display: inline-block;
+}
+
+
+
+.button {
+    background-color: seagreen;
+    margin: 10px 0 0 100px;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    cursor: pointer;
+}
+
+
+
+.github {
+    height: 40px;
+    width: 
+    list-style-image: url('portfolio_images/github.png');
+}
+
+.linkedin {
+    list-style-image: url('portfolio_images/linkedin.png');
+}
+
+.twitter {
+    list-style-image: url('portfolio_images/twitter.png');
+}
+
+.codepen {
+    list-style-image: url('portfolio_images/codepen.png');
+}
