@@ -35,6 +35,11 @@ $(document).ready(function(){
     // $(".box").click(function(){
     // $( ".bottom-box button" ).append( "<h1>!!!</h1>" );
     // })
+    $(".container box1").click(function(){
+        $(this).hide("slow");
+    })
+    
+    
     $("h2:first").text("Don't click here");
     $("h2:first").click(function(){
         $( ".header" ).html( "<img src='images/baneWeb.jpg' alt='BANE'>" );
