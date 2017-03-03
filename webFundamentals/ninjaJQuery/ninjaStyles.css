@@ -1,0 +1,31 @@
+.container {
+        width: 1278px;
+        height: 600px;
+        margin: 0 auto;
+        margin-top: 200px;
+    }
+
+.box {
+    width: 292px;
+    height: 292px;
+    display: inline-block;
+}
+
+/*.box1 {
+    width: 292px;
+    padding: 10px;
+    display: inline-block;
+    border: 2px solid black;  
+}*/
+
+button {
+    padding: 20px 40px;
+    position: relative;
+    left: 525px;
+    top: 100px;
+    color: white;
+    font-weight: 600;
+    background: red;
+    border: none;
+}
+
