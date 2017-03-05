@@ -1,0 +1,45 @@
+pip install Django pip list
+This command installs the latest version of Django creating a virtual environment 
+
+Running this command a second time outputs this error:
+
+Requirement already satisfied: Django in /usr/local/lib/python2.7/site-packages
+
+
+So running it a second time tells you that it is already installed and the location of the installation.
+
+pip list lists everything, and pip freeze installs everything installed by pip
+
+When you give the command on the desktop:
+pip freeze > requirements.txt
+
+The result is a new file in the local directory called “requirements.txt” and inside is a list of all of the versions of associated programs.
+
+click==6.7
+Django==1.10.6
+Flask==0.12
+itsdangerous==0.24
+Jinja2==2.9.5
+List==1.3.0
+MarkupSafe==0.23
+Werkzeug==0.11.15
+
+
+pip show Django
+This is the output for the above:
+Name: Django
+Version: 1.10.6
+Summary: A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+Home-page: http://www.djangoproject.com/
+Author: Django Software Foundation
+Author-email: foundation@djangoproject.com
+License: BSD
+Location: /usr/local/lib/python2.7/site-packages
+Requires: 
+
+pip uninstall Django
+this uninstalls Django
+
+
+pip search Flask
+This also you to sift through all of the packages 
