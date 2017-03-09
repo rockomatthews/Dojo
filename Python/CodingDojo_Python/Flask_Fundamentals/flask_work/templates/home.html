@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ENTER TITLE</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="JS.js"></script>
+</head>
+
+<body>
+<h1>Did it work?</h1>
+    <a href="/cali">California</a>
+    <br>
+    <a href="/indi">Indiana</a> 
+    <br>
+    <a href="/new_york">New York</a> 
+    <br>
+    <a href="/form">Form</a>
+    <br>
+    <a href="/form">logout</a>
+
+    {{session.user_name}} <br>
+
+    {% for location in session.trip_history %}
+    {{ location }} <br>
+    {% endfor %}
+
+
+</body>
+
+</html>

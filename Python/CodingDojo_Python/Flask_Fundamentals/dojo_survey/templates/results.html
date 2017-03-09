@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ENTER TITLE</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="JS.js"></script>
+</head>
+
+<body>
+    <p>This is what you decided on:</p><br>
+    <h1>name: {{ answer_name }}</h1><br>
+    <h1>location: {{ answer_location }}</h1><br>
+    <h1>language: {{ answer_favorite_language }}</h1><br>
+    <h1>comments: {{ answer_comments }}</h1>
+
+    <FORM><INPUT Type="button" VALUE="Back" onClick="history.go(-1);return true;"></FORM>
+
+</body>
+
+</html>
