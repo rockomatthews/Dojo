@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Great Number Game</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+     <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <h2>I am thinking of a number between 1-100.  Try to guess it.  I'll tell you if you're higher or lower and you can guess again.  When we're done, you can play again.</h2>
+    <h1>Begin Guessing</h1>
+    <h1>{{session.string}}</h1>
+    <form class="former" action="/process" method="post">
+        <input type="text" name="number_guess" value="">
+    <br><br>
+        <input type="submit" value="{{session.button_status}}">
+    </form> 
+</body>
+
+</html>

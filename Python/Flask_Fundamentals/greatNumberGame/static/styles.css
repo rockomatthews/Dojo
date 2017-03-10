@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+    background-color: blue;
+}
+
+h1 {
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.former {
+    position: relative;
+    left: 870px;
+    top: 300px;
+}
