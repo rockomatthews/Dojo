@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ENTER TITLE</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Your Gold: {{session.gold}}</h1><br>
+    <form action="/reset" method="post">
+        <input type="hidden" name="reset_it" value="zero_it" />
+        <input type="submit" value="Withdraw! Gold!">
+    </form>
+    <div class="boxes">
+        <div class="box">
+            <h1>Farm</h1>
+            <p>(earns 10-20 gold)</p>
+            <form action="/process" method="post">
+                <input type="hidden" name="select_it" value="Farm" />
+                <input type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="box">
+            <h1>Cave</h1>
+            <p>(earns 5-10 gold)</p>
+            <form action="/process" method="post">
+                <input type="hidden" name="select_it" value="Cave" />
+                <input type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="box">
+            <h1>House</h1>
+            <p>(earns 2-5 gold)</p>
+            <form action="/process" method="post">
+                <input type="hidden" name="select_it" value="House" />
+                <input type="submit" value="Find Gold!">
+            </form>
+        </div>
+        <div class="box">
+            <h1>Casino</h1>
+            <p>(earns 0-50 gold)</p>
+            <form action="/process" method="post">
+                <input type="hidden" name="select_it" value="Casino" />
+                <input type="submit" value="Find Gold!">
+            </form>
+        </div>
+    </div>
+    <div class="scroller">
+        <br>{{session.status}}
+    
+    </div> 
+</body>
+
+</html>
