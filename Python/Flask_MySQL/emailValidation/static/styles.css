@@ -1,0 +1,42 @@
+body {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-content {
+    position: relative;
+    top: 200px;
+    text-align: center;
+}
+
+input[type=text] {
+    width: 340px;
+    height: 42px;
+    font-size: 26px;
+}
+
+input[type=submit] {
+    padding:15px 40px;
+    background: green;
+    border:0 none;
+    cursor:pointer;
+    font-size: 26px;
+    color: white;
+    margin-left: 5px;
+}
+
+.flashes {
+    position: absolute;
+    top: 120px;
+    left: 190px;
+}
+
+.dress_up {
+    width: 800px;
+    height: 30px;
+    background-color: red;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+}
