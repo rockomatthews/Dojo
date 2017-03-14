@@ -1,23 +1,26 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Friends</title>
+    <meta charset="UTF-8">
+    <title>Friends /w Benefits</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='styles.css') }}">
 </head>
+
 <body>
-{{ all_friends }}
-  <h1>These are all my friends!</h1>
-{% for friend in all_friends: %}
-  <p>ID: {{ friend['id'] }}</p>
-  <p>First Name: {{ friend['first_name'] }}</p>
-  <p>Last Name: {{ friend['last_name'] }}</p>
-  <p>Occupation: {{ friend['occupation'] }}</p>
-  <hr>
-{% endfor %}
-  <h2>Add a Friend</h2>
-  <form action='/friends' method='POST'>
-    <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label>
-    <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label>
-    <label for="occupation">Occupation:<input type="text" name="occupation" id="occupation"></label>
-    <input type="submit" value="Add">
-  </form>
+    <h1>Friends List</h1>
+    <h2>Add Friend</h2>
+    <form action="/friends" method="POST">
+        <label for="html_first_name">First Name </label><br>
+        <input type="text" name="html_first_name"><br>
+        <label for="html_last_name">Last Name  </label><br>
+        <input type="text" name="html_last_name"><br>
+        <label for="html_occupation">Occupation</label><br>
+        <input type="text" name="html_occupation"><br>
+        <label for="html_password">Password   </label><br>
+        <input type="text" name="html_password"><br>
+        <input type="submit" value="add friend">
+    </form>
 </body>
+
 </html>

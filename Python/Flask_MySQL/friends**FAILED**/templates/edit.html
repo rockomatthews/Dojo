@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Details</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <form action="/friends/update" method='post'>
+        <label for="html_first_name">First Name:</label>
+        <input type="text" name="html_first_name" value="{{ one_friend['first_name'] }}">
+        
+        <label for="html_last_name">Last Name:</label>
+        <input type="text" name="html_last_name" value="{{ one_friend['last_name'] }}">
+        
+        <label for="html_occupation">Occupation:</label>
+        <input type="text" name="html_occupation" value="{{ one_friend['occupation'] }}">
+        
+        <input type="submit" value="update">
+    </form>
+</body>
+
+</html>
+

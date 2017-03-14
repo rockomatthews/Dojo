@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Friends</title>
+  <link rel='stylesheet' type='text/css' href='http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css'>
+  <link rel='stylesheet' type='text/css' href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h1>These are all my friends!</h1>
+{% for friend in all_friends: %}
+  <p>ID: {{ friend['id'] }}</p>
+      <form action="/friends/{{friend['id']}}/delete" method="POST">
+        <button name="deleteButton" value="delete">delete</button>
+      </form>
+      <form action="/friends/{{friend['id']}}/edit" method="get">
+        <button name="editButton" value="edit">edit</button>    
+      </form>
+  <p>First Name: {{ friend['first_name'] }}</p>
+  <p>Last Name: {{ friend['last_name'] }}</p>
+  <p>Occupation: {{ friend['occupation'] }}</p>
+  <hr>
+{% endfor %}
+  <h2>Add a Friend</h2>
+  <form action='/friends' method='post'>
+    <label for="html_first_name">Name:</label>
+    <input type="text" name="html_first_name">
+    
+    <label for="html_last_name">Last Name:</label>
+    <input type="text" name="html_last_name">
+    
+    <label for="html_occupation">Occupation:</label>
+    <input type="text" name="html_occupation">
+    <input type="submit" value="add friend">
+  </form>
+</body>
+</html>
+
+
+
