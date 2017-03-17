@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+        {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'word_maker/css/styles.css' %}"media="screen" title="no title"  charset="utf-8">
+      </head>
+    
+    <body>
+        <h2>Random word attempt {{request.session.the_count}}</h2>
+        <h1>{{request.session.random_one}}</h1>
+        <form action="/create_word" method="post">
+        {% csrf_token %}
+            <input type="submit" value="generate" name="generate">
+        </form>
+    </body>
+
+  </html>
