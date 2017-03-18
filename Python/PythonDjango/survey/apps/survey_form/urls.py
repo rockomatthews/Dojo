@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     url(r'^$', index),
-    # url(r'^create_word$', views.random_generator)
+    url(r'^process$', views.results),
+    url(r'^return$', views.go_back)
 ]

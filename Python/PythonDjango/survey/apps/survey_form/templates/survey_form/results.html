@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>The Big Survey</title>
+</head>
+
+<body>
+    <h1>What you've done is the survey {{request.session.the_count}} times</h1>
+    <h2>Name: {{server_name}}</h2>
+    <h2>Favourite Language: {{server_lang}}</h2>
+    <h2>Location: {{server_location}}</h2>
+    <h2>Comment: {{server_comment}}</h2>
+    <form action="/return">
+        <input type="submit" value="back" name="back">
+    </form>
+</body>
+
+</html>
