@@ -6,17 +6,37 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
+
+#all_them {
+    position: fixed;
+    bottom: 0%;
+    left: 15%;
+}
+
+#logo {
+    position: fixed;
+    bottom: 50%;
+    left: 35%;
+}
+
+#main_pic {
+    position: fixed;
+    bottom: 0%;
+    left: 42%;
+}
+
 
 /* Small sized screens */
 @media only screen and (max-width: 480px) {
-    body { background: green; }
+    body { background: white; }
     .twelve-s { width: 100%; }
 }
 
 /* Medium sized screens */
 @media only screen and (min-width: 481px) {
-     body { background: red; }
+     body { background: white; }
     .four-m { width: 33.333333%; }
     .five-m { width: 41.66666%; }
     .seven-m { width: 58.33333%; }
@@ -25,7 +45,7 @@
 
 /* Large sized screens */
 @media only screen and (min-width: 1024px) {
-     body { background: yellow; }
+     body { background: white; }
     .four-l { width: 33.333333%; }
     .eight-l { width: 66.66666%; }
 }
