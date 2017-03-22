@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>COURSES</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'manage_courses/css/styles.css' %}"media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h2>add a new course</h2>
+    <form action="{% url 'manage_courses:add_course' %}" method="post">
+        {% csrf_token %}
+        <label for="html_name">Name:</label>
+        <input type="text" name="html_name"><br>
+        <label for="html_description">Description:</label>
+        <textarea name="html_description"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+    <h2>Courses</h2>
+    <table>
+        <tr>
+            <th>Course Name</th>
+            <th>Description</th>
+            <th>Date Added</th>
+            <th></th>
+        </tr>
+        
+        {% for course in all_da_courses %} 
+        <tr>
+            <td>{{course.name}}</td>
+            <td>{{course.description}}</td>
+            <td>{{course.created_at}}</td>
+            <td><a href="{% url 'manage_courses:remove' class_id=course.id %}">REMOVE</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</html>

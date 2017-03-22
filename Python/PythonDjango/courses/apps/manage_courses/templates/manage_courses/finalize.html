@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>finalize the delete</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>Are you positive that you'd like to delete</h1><br>
+    {% for course in all_da_courses %} 
+    <h3>Name: {{course.name}}</h3>
+    <h3>Description: {{course.description}}</h3>
+</body>
+
+</html>
