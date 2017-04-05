@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>69FM</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+</head>
+
+<body>
+    <h1>welcome to the show. register here</h1>
+    <form action="{% url 'user:register' %}" method="post">
+        {% csrf_token %}
+        <label for="html_first_name">first name:</label>
+            <input type="text" name="html_first_name">
+        <label for="html_last_name">last name:</label>
+            <input type="text" name="html_last_name">
+        <label for="html_email">email:</label>
+            <input type="text" name="html_email">
+        <label for="html_password">password:</label>
+            <input type="password" name="html_password">
+        <label for="html_password_confirm">confirm password:</label>
+            <input type="password" name="html_password_confirm">
+        <input type="submit" name="register" value="register">
+    </form>
+    <br>
+    <h1>or login below</h1>
+    <br>
+    <form action="{% url 'user:login' %}" method="post">
+        {% csrf_token %}
+        <label for="html_email">email:</label>
+            <input type="text" name="html_email">
+        <label for="html_password">password:</label>
+            <input type="password" name="html_password">
+        <input type="submit" value="login" name="submit">
+    </form>
+    {% for m in messages %}
+        <h2>{{ m }}</h2>
+    {% endfor %}
+    
+</body>
+
+</html>
+
+
+

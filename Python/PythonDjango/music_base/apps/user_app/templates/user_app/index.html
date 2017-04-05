@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Music Base</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <div id="register">
+        <h2>register</h2>
+        <form action="{% url 'user_app:register' %}" method="post">
+        {% csrf_token %}
+            <label for="first_name">Name:</label>
+                <input type="text" name="first_name">
+            <label for="last_name">Alias:</label>
+                <input type="text" name="last_name">
+            <label for="email">Email:</label>
+                <input type="text" name="email">
+            <label for="password">Password:</label>
+                <input type="password" name="password">
+            <p>*password needs to be at least 8 characters</p>
+            <label for="confirm_password">Confirm Password:</label>
+                <input type="password" name="confirm_password">
+            <input type="submit" value="REGISTER" name="register">
+        </form>
+    </div>
+    <div id="login">
+        <h2>login</h2>
+        <form action="{% url 'user_app:login' %}" method="post">
+        {% csrf_token %}
+            <label for="login_email">Email:</label>
+                <input type="text" name="login_email">
+            <label for="login_password">Password:</label>
+                <input type="password" name="login_password">
+            <input type="submit" value="LOGIN" name="login">
+        </form>
+    </div>
+    {% if messages %}
+        {% for message in messages %}
+            <h2>{{ message }}</h2>
+        {% endfor %}
+    {% endif %}
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ENTER TITLE</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+</head>
+
+<body>
+    <h1>Profile</h1>
+   {% if request.session.user_name %}
+   {{request.session.user_name}} <a href="{% url 'user:profile' %}">profile</a>
+        <br>
+        <a href="{% url 'user:logout' %}">logout</a>
+        {% else %}
+        <a href="{% url 'user:home' %}">login</a>
+    {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    {% if 'user_name' in request.session %}
+    <form action="{% url 'music:add_artist' %}" method="post">
+        {% csrf_token %}
+        <label for="html_add_artist_name">add artist:</label> 
+        <input type="text" name="html_add_artist_name">
+        <input type="submit" name="submit" value="add">  {% for m in messages %}{{ m }}{% endfor %}
+    </form>
+    <hr>
+    <h1>Playlists</h1>
+        <table>
+            <tr>
+                <th>artist</th> 
+            </tr>
+            <tr>
+                {% for artist in Artist %}                
+                <td>{{ name }}</td> 
+                {% endfor %}
+            </tr>
+        </table>
+    {% else %}
+    {% endif %}
+</body>
+
+</html>

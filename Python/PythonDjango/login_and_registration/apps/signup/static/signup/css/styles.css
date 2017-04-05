@@ -1,0 +1,24 @@
+body {
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    display: table;
+    text-align: center;
+}
+
+#form1, #form2 {
+    display: inline-block;
+    font: 26px;
+    position: relative;
+    margin: 0px auto;
+    background: lightseagreen;
+}
+
+input[type='text'], input[type='password'] {
+    display: table;
+    position: relative;
+    margin: 10px 20px;
+}
+
+
+

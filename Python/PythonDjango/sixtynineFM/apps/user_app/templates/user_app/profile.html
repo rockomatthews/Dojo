@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ENTER TITLE</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+</head>
+
+<body>
+    <h1>Playlist App</h1>
+   {% if request.session.user_name %}
+   {{request.session.user_name}} <a href="{% url 'user:edit_profile' %}"> edit</a><br>
+        <br>
+        <br>
+        <a href="{% url 'playlist:home' %}">home</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>COMING SOON!  Upload your ds photo!</h1>
+    {% endif %}
+</body>
+
+</html>

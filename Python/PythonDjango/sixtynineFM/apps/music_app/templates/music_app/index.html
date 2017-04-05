@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Music Presents</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+</head>
+
+<body>
+    <h1>Music App</h1>
+    <form action="{% url 'music:add_artist' %}" method="post">
+        <label for="html_add_artist">add artist:</label>
+        <input type="text" name="html_add_artist">
+        <input type="submit" name="submit" value="add">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Playlist</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'play_maker/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+    <form action="{% url 'pytunes:add' %}" method="post">
+        {% csrf_token %}
+        <label for="playlist_name">Enter playlist name:</label>
+        <input type="text" name="playlist_name">
+        <input type="submit" name="submit" value="submit">
+    </form>
+    <table>
+    <tr>
+        <th>Playlist Name</th>
+        <th>Song Count</th>
+        <th>Date Created</th>
+    </tr>
+    {% for p in playlists %}
+    <tr>
+        <td>{{p.name}}</td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

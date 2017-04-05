@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'email_checker/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+
+<body>
+    <h1>Thank you for logging in {{last_email.email}}</h1>
+    <form action="{% url 'email_checker:go_back' %}">
+        <input type="submit" value="back" name="go_back">
+    </form>
+    <table>
+        <tr>
+            <th>email address</th>
+            <th>created at</th>
+        </tr>
+    {% for email in all_emails %}
+        <tr>
+            <td>{{email.email}}</td>
+            <td>{{email.created_at}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+</body>
+
+</html>

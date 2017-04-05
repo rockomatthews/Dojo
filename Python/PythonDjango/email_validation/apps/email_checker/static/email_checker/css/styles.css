@@ -1,0 +1,37 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+img {
+    position: relative;
+    margin: 0 auto;
+    top: 200px;
+    height: 450px;
+    width: 900px;
+}
+
+form {
+    position: relative;
+    margin: 0 auto;
+    top: 300px;
+    text-align: center;
+    
+}
+
+input[type=text] {
+    height: 50px;
+    width: 460px;
+    margin: 20px 0;
+    font-size: 26px;
+    border: 2px solid black;
+}
+
+input[type=submit] {
+    width: 160px;
+    height: 60px;
+    color: white;
+    background-color: green;    
+}

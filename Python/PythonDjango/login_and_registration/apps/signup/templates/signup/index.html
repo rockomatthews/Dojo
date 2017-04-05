@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login or Register</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssnormalize/cssnormalize-min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'signup/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+
+<body>
+    <h1>REGISTER</h1>
+    {% csrf_token %}
+    <form id="form1" action="{% url 'signup:process_reg' %}" method="post">
+        <label for="html_first_name">First Name:</label>
+        <input type="text" name="html_first_name">
+        <label for="html_last_name">Last Name:</label>
+        <input type="text" name="html_last_name">
+        <label for="html_email">Email:</label>
+        <input type="text" name="html_email">
+        <label for="html_reg_password">Paswword:</label>
+        <input type="password" name="html_reg_password">
+        <label for="html_regcon_password">Confirm Paswword:</label>
+        <input type="password" name="html_regcon_password">
+        <input type="submit" value="register" name="submit">
+    </form>
+    <br>
+    <br>
+    <br>
+    <h1>LOGIN</h1>
+    {% csrf_token %}
+    <form id="form2" action="{% url 'signup:process_log' %}" method="post">
+        <label for="html_login_email">Email:</label>
+        <input type="text" name="html_login_email">
+        <label for="html_login_password">Password:</label>
+        <input type="password" name="html_login_password">
+        <input type="submit" value="login" name="submit">
+    </form>
+</body>
+
+</html>
