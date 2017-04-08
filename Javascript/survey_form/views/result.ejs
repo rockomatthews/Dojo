@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+    <h1>What you've done is the survey</h1>
+    <h2>Name: <%= user.name %></h2>
+    <h2>Location: <%= user.location %></h2>
+    <h2>Favourite Language: <%= user.language %></h2>
+    <h2>Comment: <%= user.comment %></h2>
+    <form action="/index">
+        <input type="submit" value="back" name="back">
+    </form>
+</body>
+
+</html>
