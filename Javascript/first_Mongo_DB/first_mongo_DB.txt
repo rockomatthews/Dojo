@@ -1,0 +1,189 @@
+____1____
+
+> db.Students.insert({name: "Rob", home_state: "Illinois", lucky_number: 10, birthday: {month: 10, day: 13, year: 1985}})
+
+
+____2____
+
+> db.Students.find().pretty()
+{
+	"_id" : ObjectId("58e9511719c2563f165a8f66"),
+	"name" : "Mike",
+	"home_state" : "Ohio",
+	"lucky_number" : 69,
+	"birthday" : {
+		"month" : 10,
+		"day" : 15,
+		"year" : 1969
+	}
+}
+{
+	"_id" : ObjectId("58e9516019c2563f165a8f67"),
+	"name" : "Mia",
+	"home_state" : "Washington",
+	"lucky_number" : 22,
+	"birthday" : {
+		"month" : 16,
+		"day" : 12,
+		"year" : 1985
+	}
+}
+{
+	"_id" : ObjectId("58e9518219c2563f165a8f68"),
+	"name" : "Nick",
+	"home_state" : "California",
+	"lucky_number" : 86,
+	"birthday" : {
+		"month" : 6,
+		"day" : 14,
+		"year" : 1986
+	}
+}
+{
+	"_id" : ObjectId("58e9519819c2563f165a8f69"),
+	"name" : "Rob",
+	"home_state" : "Illinois",
+	"lucky_number" : 10,
+	"birthday" : {
+		"month" : 10,
+		"day" : 13,
+		"year" : 1985
+	}
+}
+{
+	"_id" : ObjectId("58e952d319c2563f165a8f6a"),
+	"name" : "Megan",
+	"home_state" : "Illinois",
+	"lucky_number" : 14,
+	"birthday" : {
+		"month" : 3,
+		"day" : 5,
+		"year" : 1994
+	}
+}
+
+
+____3____
+
+> db.Students.find ( { home_state: { $in: ["California", "Washington"] } } )
+{ "_id" : ObjectId("58e9516019c2563f165a8f67"), "name" : "Mia", "home_state" : "Washington", "lucky_number" : 22, "birthday" : { "month" : 16, "day" : 12, "year" : 1985 } }
+{ "_id" : ObjectId("58e9518219c2563f165a8f68"), "name" : "Nick", "home_state" : "California", "lucky_number" : 86, "birthday" : { "month" : 6, "day" : 14, "year" : 1986 } }
+
+
+____4____
+
+> db.Students.find( { lucky_number: { $gt: 3 } } )
+{ "_id" : ObjectId("58e9511719c2563f165a8f66"), "name" : "Mike", "home_state" : "Ohio", "lucky_number" : 69, "birthday" : { "month" : 10, "day" : 15, "year" : 1969 } }
+{ "_id" : ObjectId("58e9516019c2563f165a8f67"), "name" : "Mia", "home_state" : "Washington", "lucky_number" : 22, "birthday" : { "month" : 16, "day" : 12, "year" : 1985 } }
+{ "_id" : ObjectId("58e9518219c2563f165a8f68"), "name" : "Nick", "home_state" : "California", "lucky_number" : 86, "birthday" : { "month" : 6, "day" : 14, "year" : 1986 } }
+{ "_id" : ObjectId("58e9519819c2563f165a8f69"), "name" : "Rob", "home_state" : "Illinois", "lucky_number" : 10, "birthday" : { "month" : 10, "day" : 13, "year" : 1985 } }
+{ "_id" : ObjectId("58e952d319c2563f165a8f6a"), "name" : "Megan", "home_state" : "Illinois", "lucky_number" : 14, "birthday" : { "month" : 3, "day" : 5, "year" : 1994 } }
+
+> db.Students.find( { lucky_number: { $lt: 10 } } ) //none of my numbers are below 10 so using 65 as my new high limit like this.. 🤔BAM!!☠️// 
+> db.Students.find( { lucky_number: { $lt: 65 } } )
+> db.Students.find( { lucky_number: { $lt: 65 } } )
+{ "_id" : ObjectId("58e9516019c2563f165a8f67"), "name" : "Mia", "home_state" : "Washington", "lucky_number" : 22, "birthday" : { "month" : 16, "day" : 12, "year" : 1985 } }
+{ "_id" : ObjectId("58e9519819c2563f165a8f69"), "name" : "Rob", "home_state" : "Illinois", "lucky_number" : 10, "birthday" : { "month" : 10, "day" : 13, "year" : 1985 } }
+{ "_id" : ObjectId("58e952d319c2563f165a8f6a"), "name" : "Megan", "home_state" : "Illinois", "lucky_number" : 14, "birthday" : { "month" : 3, "day" : 5, "year" : 1994 } }
+
+> db.Students.find( { $and: [ { lucky_number: { $gte: 12 } }, { lucky_number: { $lte: 65 } } ] } )
+{ "_id" : ObjectId("58e9516019c2563f165a8f67"), "name" : "Mia", "home_state" : "Washington", "lucky_number" : 22, "birthday" : { "month" : 16, "day" : 12, "year" : 1985 } }
+{ "_id" : ObjectId("58e952d319c2563f165a8f6a"), "name" : "Megan", "home_state" : "Illinois", "lucky_number" : 14, "birthday" : { "month" : 3, "day" : 5, "year" : 1994 } }
+
+
+____5____
+
+> db.Students.updateMany({}, {$set: {interests: ['coding', 'brunch', 'MongoDB']}})
+{ "acknowledged" : true, "matchedCount" : 5, "modifiedCount" : 5 }
+
+
+____6____
+
+> db.Students.update( { name: "Rob" }, { $push: { interests: "Megan" } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 }))
+
+> db.Students.update( { name: "Megan" }, { $push: { interests: "Rob" } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 }))
+
+> db.Students.update( { name: "Nick" }, { $push: { interests: "Taxes" } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 }))
+
+> db.Students.update( { name: "Mia" }, { $push: { interests: "not Mike" } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 }))
+
+> db.Students.update( { name: "Mike" }, { $push: { interests: "Mia" } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 }))
+
+
+____7____
+
+> db.Students.update( { name: "Nick" }, { $pull: { interests: "Taxes" } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+
+_____8____
+
+> db.Students.remove({ home_state: { $in: ["California", "Washington"] } } )
+WriteResult({ "nRemoved" : 2 })
+
+> db.Students.remove({ name: "Mike" } )
+WriteResult({ "nRemoved" : 1 })
+
+
+____9____
+
+> db.Students.deleteOne( { lucky_number: { $gt: 5 } } )
+{ "acknowledged" : true, "deletedCount" : 1 }
+
+
+____10___
+
+> db.Students.updateMany( {}, { $set: { belts: 0 } } )
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.Students.find({}).pretty()
+{
+	"_id" : ObjectId("58e952d319c2563f165a8f6a"),
+	"name" : "Megan",
+	"home_state" : "Illinois",
+	"lucky_number" : 14,
+	"birthday" : {
+		"month" : 3,
+		"day" : 5,
+		"year" : 1994
+	},
+	"interests" : [
+		"coding",
+		"brunch",
+		"MongoDB",
+		"Rob"
+	],
+	"belts" : 0
+}
+
+
+____11____
+
+> db.Students.update( { home_state: "Illinois" }, { $inc: { belts: 1 } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+
+____12___
+
+{$rename: { <field1>: <newName1>, <field2>: <newName2>, ... } }
+
+
+____13___
+
+> db.Students.updateMany( {}, { $rename: { "belts": "belts_earned" } } )
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+____14___
+
+> db.Students.update( {}, { $unset: { lucky_number: "" } } )
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+
+____15____
+
+> db.Students.updateMany( {}, { $currentDate: { "updated_on": { $type: "timestamp" } } } )
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
