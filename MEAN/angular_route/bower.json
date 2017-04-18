@@ -1,0 +1,15 @@
+{
+  "name": "angular_route",
+  "homepage": "https://github.com/rockomatthews/Dojo",
+  "authors": [
+    "Rob Matthews <rob.matthews@me.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
+  }
+}
