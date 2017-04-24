@@ -1,0 +1,21 @@
+{
+  "name": "revisitingRoutes",
+  "homepage": "https://github.com/rockomatthews/Dojo",
+  "authors": [
+    "Rob Matthews <rob.matthews@me.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.4",
+    "angular": "^1.6.4"
+  }
+}

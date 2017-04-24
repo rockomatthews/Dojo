@@ -3,7 +3,7 @@ app.factory('productFactory', ['$http', function($http) {
   var factory = {};
   var products = [];
   factory.index = function(callback){
-  
+    //callback is the function that is passed to the productIndex by the controller, in this caseP: setProducts.
     callback(products);
   }
   factory.create = function(product, callback){
@@ -19,8 +19,8 @@ app.factory('productFactory', ['$http', function($http) {
   return factory;
 }]);
 
-app.controller('productController', ['$scope','productFactory', function($scope, productFactory) {
-  
+app.controller('productsController', ['$scope','productFactory', function($scope, productFactory) {
+  // callback, but not as an anonymous function, rather a named function!
   function setProducts(data){
     $scope.products = data;
     $scope.product = {};
