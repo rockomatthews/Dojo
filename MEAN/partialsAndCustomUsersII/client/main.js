@@ -1,19 +1,13 @@
 console.log("string")
 var app = angular.module("app", ["ngRoute"])
 app.config(function($routeProvider) {
-        $routeProvider
-            .when('/users',{
-                templateUrl: 'static/partials/customizeUsers.html',
-            })
-            // .when('/list',{
-            //     templateUrl: 'partials/userList.html'
-            // })
-            .when('/list',{
-                templateUrl: 'static/partials/userList.html',
-            })
-            .otherwise({
-            redirectTo: '/'
-            });
+    $routeProvider
+        .when('/users',{
+            // templateUrl: 'static/partials/customizeUsers.html',
+        })
+        .otherwise({
+        redirectTo: '/'
+        });
 });
 
 app.factory("userFactory",[function(){
