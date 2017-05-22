@@ -1,0 +1,40 @@
+<h1>Hi and welcome to the survey</h1>
+
+<div="container">
+
+<form action="/survey" method="post">
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <div>
+        <label>Your Name:</label>
+        <input type="text" name="survey[name]">
+    </div>
+    <div>
+        <lable>Your Location:</lable>
+        <select name="survey[location]" class="select">
+            <option value="Mountain View">Mountain View</option>
+            <option value="Seattle">Seattle</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Austin">Austin</option>
+            <option value="New York">New York</option>
+        </select>
+    </div>
+    <div>
+        <label>Your Favorite Language</label>
+        <select name="survey[favorite_language]" class="select">
+            <option value="Ruby">Ruby</option>
+            <option value="Javascript">Javascript</option>
+            <option value="Python">Python</option>
+            <option value="C++">C++</option>
+            <option value="Spanish">Spanish</option>
+        </select>
+    </div>
+    <div>
+        <label>Comment (optional):</label>
+        <textarea rows="4" cols="35" name="survey[comment]"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="submit">
+    </div>
+</div>
+
+</form>
