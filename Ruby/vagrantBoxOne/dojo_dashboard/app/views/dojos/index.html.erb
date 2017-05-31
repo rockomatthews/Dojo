@@ -1,0 +1,19 @@
+<h1>Dojos by location</h1>
+
+<table>
+    <thead>
+        <th>Branch:</th>
+        <th>Street:</th>
+        <th>City:</th>
+        <th>State:</th>
+    </thead>
+    <tbody>
+        <% @dojos.each do |dojo| %>
+        <tr>
+            <td><%= dojo.branch %></td>
+            <td><%= dojo.street %></td>
+            <td><%= dojo.city %></td>
+            <td><%= dojo.state %></td>
+        </tr>
+    </tbody>
+</table>
