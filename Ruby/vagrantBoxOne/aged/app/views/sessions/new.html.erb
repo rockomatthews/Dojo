@@ -1,0 +1,9 @@
+<form action="/sessions" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label>email</label>
+        <input type="text" name="email" id="Email">
+    <label>password</label>
+        <input type="text" name="password" id="Password">
+    
+    <input type="submit" name="login" value="Login">
+</form>
