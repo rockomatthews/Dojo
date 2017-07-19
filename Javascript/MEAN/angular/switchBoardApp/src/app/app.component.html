@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="header">SWITCHBOARD</div>
+  <section  *ngFor="let switch of switches; let idx = index">
+    <button *ngIf="!switch" [ngClass]="{'on': switch}" (click)="switchSwitch(idx)">OFF</button> 
+    <button *ngIf="switch" [ngClass]="{'on': switch}" (click)="switchSwitch(idx)">ON</button> 
+  </section>
+</div>

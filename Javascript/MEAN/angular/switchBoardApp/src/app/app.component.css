@@ -1,0 +1,32 @@
+div.container {
+    margin: 0 auto;
+    align-content: center;
+    width: 1480px;
+    height: auto;
+    background-color: lightskyblue;
+    border: 2px border-solid #000000;
+}
+
+div.header {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 60px;
+}
+
+section {
+    text-align: center;
+    display: inline-block
+}
+
+button {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    margin: 100px 20px 30px 20px;
+    background-color: red;
+}
+
+button.on {
+    background-color: green;
+}
