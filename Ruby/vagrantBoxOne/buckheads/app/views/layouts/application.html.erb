@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Buckheads</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<% if flash[:errors] %>
-  <% flash[:errors].each do |e| %>
-    <%= e %>
-  <% end %>
-<% end %>
-<% if current_user %>
-  <form action="/sessions/<%=current_user.id%>" method="post">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Log Out">
-  </form>
-
-<%= @user.first_name %>  
-<%= @user.wallet.money %>
-
-<% end %> 
+  
 
 
+  <div>
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |e| %>
+        <%= e %>
+      <% end %>
+    <% end %>
+    <% if current_user %>
+      
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center"><%=image_tag("straightupLogoSiteHome.png")%></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#"><%= current_user.first_name %></a></li>
+        <li><a href="#">Balance: <%= current_user.wallet.money %></a></li>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a class="waves-effect waves-light btn-large"><%= button_to "LOGOUT", logout_path, method: :get %></a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="#" class="brand-logo center"><%= image_tag("straightupLogoSiteHome.png")%></a></li>
+        <li><a href="#"><%= current_user.first_name %></a></li>
+        <li><a href="#">Balance: <%= current_user.wallet.money %></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <% end %> 
 
 
 
-<%= yield %>
 
-</body>
+
+    <%= yield %>
+  </div>
+
+  </body>
 </html>

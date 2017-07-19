@@ -11,8 +11,5 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
+//= require materialize-sprockets
 //= require_tree .
-//= require materialize
-//= require materialize/extras/nouislider
