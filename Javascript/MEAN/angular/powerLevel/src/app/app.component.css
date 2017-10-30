@@ -1,0 +1,73 @@
+.appComponent {
+    margin: 40px auto 0 auto;
+    width: 1200px;
+    height: 800px;
+    border: 2px solid black;
+    padding: 40px 0 40px 40px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+}
+
+.top {
+    width: 1200px;
+    height: 300px;
+}
+
+h2 {
+    position: absolute;
+    margin-top: -55px;
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+    background-color: white;
+    padding: 0 10px 0 10px;
+}
+
+.calculatePower {
+    display: inline-block;
+    vertical-align: top;
+}
+
+h1 {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+input {
+    height: 75px;
+    margin-left: 20px;
+    font-size: 30px;
+    width: 100px;
+    display: inline-block;
+}
+
+button {
+    display: inline-block;
+    width: 250px;   
+    height: 80px;
+    background-color: skyblue;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+img {
+    float: right;
+    width: 150px;
+    margin-right: 40px;
+}
+
+.powerLevels {
+    width: 1200px;
+    height: 400px;
+}
+
+.profileBox {
+    vertical-align: top;
+    width: 353px;
+    height: 200px; 
+    border: 2px solid black;
+    display: inline-block;
+    margin-right: 40px;
+    margin-top: 40px;
+}

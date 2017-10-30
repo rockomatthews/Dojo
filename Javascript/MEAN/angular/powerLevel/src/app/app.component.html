@@ -1,0 +1,43 @@
+<div class="appComponent">
+  <div class="top">
+    <h2>appComponent</h2>
+    <div class="calculatePower">
+      <h1>Initial Power Level</h1>
+      <input type="number" class="form-control" min="1" max="100">
+      <button (click)="onClickMe()">Calculate Power</button>
+    </div>
+    <img src="/assets/images/profilePic.png" alt="fart">
+  </div>
+  <div class="powerLevels">
+    <div class="profileBox">
+      <app-human [theLevels]="levels">
+        {{ human | json }}
+      </app-human>
+    </div>
+    <div class="profileBox">
+      <app-saiyan>
+        {{ saiyan | json }}
+      </app-saiyan>
+    </div>
+    <div class="profileBox">
+      <app-super-saiyan>
+        {{ superSaiyan | json }}
+      </app-super-saiyan>
+    </div>
+    <div class="profileBox">
+      <app-super-saiyan-two>
+        {{ superSaiyanTwo | json }}
+      </app-super-saiyan-two>
+    </div>
+    <div class="profileBox">
+      <app-super-saiyan-three>
+        {{ superSaiyanThree | json }}
+      </app-super-saiyan-three>
+    </div>
+    <div class="profileBox">
+      <app-super-saiyan-four>
+        {{ superSaiyanFour | json }}
+      </app-super-saiyan-four>
+    </div>
+  </div>
+</div>
